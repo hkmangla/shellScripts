@@ -1,0 +1,30 @@
+#!/bin/bash
+count=1
+for file in /home/hemant/MyDrive/Programming/cppProgramms/Algorithm/*
+do
+ 	if [ -f $file ]
+	then
+		old=$IFS
+		IFS=/
+		for files in $file
+		do
+			if [ $count -eq 8 ]
+			then
+#			echo "$files"
+			if [ -f /home/hemant/MyDrive/Programming/cppProgramms/Algorithms/$files.cpp ]
+			then
+			#	mv /home/hemant/MyDrive/Programming/cppProgramms/$files.cpp /home/hemant/hhhh
+				echo "$files.cpp exists"
+			else
+				echo "$files.cpp does not exits"
+			fi
+			count=1
+			else
+				count=$[ $count + 1 ]
+			fi
+		done
+		IFS=$old
+	fi
+done
+
+
