@@ -1,0 +1,9 @@
+#!/bin/bash
+
+exec 3>  closeTest
+
+echo "Write into file and now close the file" >&3
+
+cat closeTest
+exec 3>&-
+

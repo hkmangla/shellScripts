@@ -1,0 +1,5 @@
+#!/bin/bash
+# testing STDERR descriptor
+
+echo "This is error Message " >&2
+echo "This is normal output"

@@ -1,0 +1,17 @@
+#!/bin/bash
+#Math calculations using cmd
+var1=5
+var2=4
+var3=$(echo "scale = 4; $var1 / $var2" | bc)
+echo "Result is $var3"
+
+#Input Indirection Method in bc
+var4=$(bc << eof
+scale = 4
+a1=$var1 * $var2
+b1=$var2 * $var3
+a1 + b1
+eof
+)
+echo "Result is $var4"
+exit $var1

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "checking double parentheses in if  and assign statements"
+echo
+val=4
+if (( $val ** 3 > 90 ))
+then
+	echo "Yes it works but not give result"
+else
+	echo "It works and give results"
+	(( val1=$val ** 3 ))
+	echo "Cube of $val is $val1"
+fi

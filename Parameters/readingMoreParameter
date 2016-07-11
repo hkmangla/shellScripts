@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "This fuction print square of first argument given by user and list file list of 2nd argument"
+square=$[ $1 ** 2 ]
+echo "$square"
+for file in $2/*
+do
+	echo "$file"
+done
+
+echo "Eleventh Parameter is ${11}"

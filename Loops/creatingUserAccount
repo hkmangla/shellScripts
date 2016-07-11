@@ -1,0 +1,8 @@
+#!/bin/bash
+
+input="user.csv"
+while IFS=',' read -r userid name
+do
+	echo "adding $name"
+	useradd -c "$name" -m "$userid"
+done < "$input"

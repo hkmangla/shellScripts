@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Here we use -t option to time the input"
+
+if read -t 5 -p "Please Enter your name: " name
+then
+	echo "Hello $name , welcome to my program"
+else
+	echo
+	echo "You are to slow!"
+fi

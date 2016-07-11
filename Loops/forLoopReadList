@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Reading from list"
+list="I am a student and My name is"
+list=$list" Hemant"
+for test in $list
+do
+	echo "$test"
+done

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+read -p "Enter your name: " first last
+echo "Checking data from $last, $first"
+
+read -p  "Enter your father name: "
+echo "So, $REPLY is your father"

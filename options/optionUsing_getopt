@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Separate options and  parameters and use set and getopt cmd to format option"
+
+set -- $( getopt -q ab:cd "$@")
+while [ -n "$1" ]
+do
+	case "$1" in
+	-a) echo "option -a found";;
+	-b) echo "Option -b found with parameter $2"
+		shift;;
+	-c) echo "option -c found";;
+	--) shift
+	    break;;
+	*) echo "It is not a option";;
+	esac
+	shift
+done
+count=1
+for param in $@
+do
+	echo "Parameter #$count: $param"
+	count=$[ $count + 1 ]
+done

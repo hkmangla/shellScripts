@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ $# -eq 2 ]
+then
+	echo "result is $[ $1 + $2 ]"
+else
+	echo "Too few Arguments"
+fi
+
+echo "The last Parmeter is ${!#}"

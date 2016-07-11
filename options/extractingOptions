@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Extract option from given parameters"
+while [ -n "$1" ]
+do
+	case "$1" in
+	-a) echo "option -a found";;
+	-b) echo "Option -b found";;
+	-c) echo "option -c found";;
+	*) echo "It is not a option";;
+	esac
+	shift
+done

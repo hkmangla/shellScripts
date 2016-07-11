@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Simple \$0 command print only name of file we execute not its base name"
+
+echo "File name is $0"
+echo "For print baseName we use little extra term"
+
+name=$(basename $0)
+echo "Basename of file is $name"

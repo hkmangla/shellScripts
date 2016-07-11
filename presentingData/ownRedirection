@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "File descriptor other than 0,1 and 2 can be use as user file descriptor"
+
+exec 3> ownRedOut
+echo "This is on terminal"
+echo "This is on Testfile" >&3
+echo "This is again on terminal"
+
+# exec 3>> testfile can be use define file descriptor to append in file

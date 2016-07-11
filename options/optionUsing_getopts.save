@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Now advance to getopts command to give extra feature to our scripts option handling"
+
+while getopts :ab:c opts
+do
+	case "$opts" in
+	a)echo  "Option -a found";;
+	b)echo  "Option -b found with parameter $OPTARG";;
+	c)echo "Option -c found";;
+	*)echo "$opts is not a valid option";;
+	esac
+done
+
+shift $[ $OPTIND -1 ]
+count=1
+for param in $@
+do
+	echo "Parameter 
+3 "

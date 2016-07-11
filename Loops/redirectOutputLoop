@@ -1,0 +1,19 @@
+#!/bin/bash
+
+location=/home/hemant/MyDrive/movies
+echo "Iterate through directory $location and checking it"
+var=0
+var1=0
+for file in $location/*
+do
+	echo
+	if [ -d "$file" ]
+	then
+		echo "$file is directory!"
+		(( var = $var + 1 ))
+	elif [ -f "$file" ]
+	then
+		echo "$file is file!"
+		(( var1 =  $var1 + 1 ))
+	fi
+done > forLoopRedirect.txt

@@ -1,0 +1,13 @@
+#!/bin/bash 
+echo "This program read the file test4"
+read -p "File you want to read:  " file
+echo
+echo "Reading file....."
+echo
+exec 0< $file 
+count=1
+while read line
+do
+	echo "Line $count: $line"
+	count=$[ $count + 1 ]
+done

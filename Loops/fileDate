@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ test0 -nt test1 ]
+then
+	echo "test0 is newer than test1"
+else
+	echo "test0 is older than test1"
+fi

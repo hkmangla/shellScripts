@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Creating temp file in /temp
+tempdir=$(mktemp -d tmp.XXXXXX)
+cd $tempdir
+tempfile=$(mktemp tmp.XXXXXX)
+
+exec 3> $tempfile
+echo "Line 1" >&3
+echo "Line 2" >&3
+echo "Location of temp file : $tempfile"
+
+cat $tempfile

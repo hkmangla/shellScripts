@@ -1,0 +1,16 @@
+#!/bin/bash
+echo
+echo "This program is searching executable files in bash terminal"
+echo
+IFS=:
+for folder in $PATH
+do
+	echo "Searching file in forder:  $folder"
+	for  file in $folder/*
+	do
+		if [ -x  "$file" ]
+		then
+			echo " $file"
+		fi
+	done
+done > terminalExecutableFiles.txt

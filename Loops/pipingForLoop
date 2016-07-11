@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for test in jan feb march april may june july
+do
+	echo "Month is $test"
+done | sort

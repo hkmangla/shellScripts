@@ -1,0 +1,9 @@
+#!/bin/bash
+read -p  "Enter file name that you want to read: " filename
+
+count=1
+cat $filename | while read line
+do
+	echo "Line $count: $line"
+	count=$[ $count + 1 ]
+done

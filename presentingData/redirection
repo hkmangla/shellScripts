@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Redirection of input is done by < symbol"
+echo "Redirection of output is done by > or >> symbol . Shell terminal"
+echo "use STDOUT file descriptor to save output of terminal"
+echo "Similarly use STDIN file descriptor to save input of user"
+
+echo
+echo "STDERR fie desc. is use to save error file and we can easily redirect"
+echo "Error meassage in any file using 2> symbol"
+
+
+#Redirect error only
+ls -al hemant 2> test2
+ls -al test1 hemant mangla 2> test1
+
+# Redirect error and data both in separate file
+ls -al test1 hemant mangla test2 2> test1 1> test2
+
+# Redirect error and data both in a same file
+ls -al test1 hemant mangla test2 &> test3

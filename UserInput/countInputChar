@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "This script count the one char input of user"
+
+read -n1 -p "Do you want to continue [Y/N]? " answer
+case $answer in
+Y | y) echo
+	echo "fine, you can continue...";;
+N | n) echo
+	echo "OK, good bye";;
+esac
+
+
+

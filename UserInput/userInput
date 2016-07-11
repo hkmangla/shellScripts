@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Let's start with taking user input with his name"
+
+echo
+echo "What is your name"
+read name
+
+echo "Hello $name!"
+read -p "Now enter your age: " age
+echo "So, you are born in $[ 2016 - $age ]"
+

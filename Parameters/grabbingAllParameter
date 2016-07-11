@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "Testing the variable \$* and \$@"
+echo
+echo "Using the \$* method: $*"
+echo
+echo "Using the \$@ method: $@"
+echo "But it does show the difference b/w \$@ and \$* but it is"
+echo
+count=1
+#
+for param in "$*"
+do
+	echo "\$* Parameter #$count = $param"
+	count=$[ $count + 1 ]
+done
+#
+echo
+count=1
+#
+for param in "$@"
+do
+	echo "\$@ Parameter #$count = $param"
+	count=$[ $count + 1 ]
+done
+

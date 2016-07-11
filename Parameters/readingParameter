@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "This fuction print square of argument given by user"
+square=$[ $1 ** 2 ]
+echo "$square" 

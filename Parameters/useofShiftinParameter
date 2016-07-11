@@ -1,0 +1,10 @@
+#!/bin/bash
+count=0
+echo "Use of shift command to shift paramters"
+
+while [ -n "$1" ]
+do
+	echo "Parameter #$count: $1"
+	shift
+	(( count = $count + 1 ))
+done 

@@ -1,0 +1,9 @@
+#!/bin/bash
+filename=$HOME/MyDrive/Programming/c_programms/codemonk1.cpp
+
+if [ -f $filename ]
+then
+	echo "File is exists"
+else
+	echo "file is not exists"
+fi

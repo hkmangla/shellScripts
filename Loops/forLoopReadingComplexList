@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo
+
+for test in I don't know it's happen
+do
+	echo "WORD:$test"
+done
+
+echo "This error can be remove by using '\' or double qoutes"
+
+for test in I don\'t know it\'s happen
+do
+        echo "WORD:$test"
+done
+echo
+echo "Checking another Problem"
+echo
+for test in Nevada New Hampshire New Mexico New York North Carolina
+do
+echo "Now going to $test"
+done
+echo
+echo "This can be remove by using double qoutes"
+echo
+for test in Nevada "New Hampshire" "New Mexico" "New York" "North Carolina"
+do
+echo "Now going to $test"
+done

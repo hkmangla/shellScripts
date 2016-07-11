@@ -1,0 +1,4 @@
+ls: cannot access 'hemant': No such file or directory
+ls: cannot access 'mangla': No such file or directory
+-rw-rw-r-- 1 hemant hemant 108 Jul  8 21:57 test1
+-rw-rw-r-- 1 hemant hemant  96 Jul  8 21:57 test2

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Double brackets are used to string comparison"
+echo
+if [[ $USER == h* ]]
+then 
+	echo "Welcome $USER"
+else
+	echo "Fuck Off $USER"
+fi

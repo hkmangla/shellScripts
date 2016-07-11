@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Checking OR operation"
+
+if [ -d $HOME ] || [ -d $HOME/MyDrive ]
+then
+	echo "Any one from $HOME and $HOME/MyDrive exist but dont know which"
+fi
+
+
+echo "Checking AND operation"
+
+if [ -d $HOME ] && [ -d $HOME/MyDrive ]
+then
+        echo "Both $HOME and $HOME/MyDrive exists"
+fi
+
+

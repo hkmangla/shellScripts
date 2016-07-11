@@ -1,0 +1,17 @@
+#!/bin/bash
+
+var=12
+while [ $var -gt 3 ]
+do
+	echo $var
+	((var=$var-1))
+done
+
+echo "Checking multiple test commands in while loop"
+echo
+while echo $var
+	[ $var -le 10 ]
+do
+	echo "I am inside"
+	var=$[ $var + 1 ]
+done

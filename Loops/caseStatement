@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Check case statement"
+echo
+
+case $USER in
+hemant)
+	echo "Welcome Sir"
+	echo "Enjoy your visit";;
+guest)
+	echo "take care of things";;
+*)
+	echo "Stay out from my laptop";;
+esac

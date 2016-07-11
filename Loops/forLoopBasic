@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Checking  basic for loop"
+echo
+
+for var in Delhi Gurgoan faridabad Nuh Punhana Noida
+do
+	echo "The next city is $var"
+done
+
+echo "var retain its last iteration value until we do not change it"
+echo "Last visited city is $var"
+var=Murthal
+echo "Let's now visit $var"
+

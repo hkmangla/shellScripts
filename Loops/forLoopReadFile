@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ls > list.txt
+file="list.txt"
+for test in $(cat $file)
+do
+	echo "file:  $test"
+done
+
+echo "This is not the right way because space change the value to do it more accurate way we change ifs value to newline"
+echo
+IFS_OLD=$IFS
+# IFS can be any type of sparator just put IFS=$'\n':; anything behind it
+IFS=$'\n'
+for test in $(cat $file)
+do
+        echo "file:  $test"
+done
+ 
+IFS=$IFS_OLD

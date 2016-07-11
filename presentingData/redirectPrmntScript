@@ -1,0 +1,10 @@
+#!/bin/bash
+# testing STDERR descriptor
+
+exec 2>PermanentError
+echo "This is error Message1" >&2
+echo "This is error message2" >&2
+
+exec 1>PemanentOut
+echo "This is normal output"
+echo "This is another normal output"
