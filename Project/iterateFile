@@ -1,0 +1,50 @@
+#!/bin/bash
+
+read -p "Enter directory location You want to iterate: " file_location
+tab="\t"
+function iterate {
+	local tabl=$tab
+	#echo "$1"
+	for file in "$1"/*
+	do
+		#echo $file
+		#continue
+		if [ -d "$file" ]
+		then
+			old=$IFS
+			IFS=/
+			for filen in $file
+			do
+				echo -n ""
+			done
+			#echo $filen
+			echo -e "$tabl DIRECTORY: $filen" 	
+			#echo -e "$tabl Iterating through $file"
+			tab=$tabl"\t"
+			IFS=$old 
+			iterate "$file"
+		elif [ -f "$file" ]
+		then
+			old=$IFS
+			IFS=/
+			for filen in $file
+			do
+				echo -n ""
+			done
+			echo -e "$tabl FILE: $filen"
+			IFS=$old
+		else
+			echo "File not exists"	 
+		fi				
+	done
+}
+#cat empty.txt > check
+old=$IFS
+IFS=/
+for filen in $file_location
+do
+	echo -n ""
+done
+echo "DIRECTORY: $filen"
+IFS=$old
+iterate $HOME/"$file_location"

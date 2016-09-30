@@ -1,0 +1,9 @@
+#!/bin/bash
+read -p "Enter the name of birthday girl: " name
+clear
+mplayer $HOME/Downloads/videoplayback &> /dev/null & 
+toilet -f mono12 -F border::metal Happy_ Birthday  $name | pv -qL 140
+echo
+echo
+read -n1
+clear

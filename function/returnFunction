@@ -1,0 +1,18 @@
+#!/bin/bash
+# format of defining a function in script
+# function name {
+# 		 commands
+#}
+
+function funct1 {
+	echo "This is example of function"
+	ls
+}
+function double {
+		read -p "Enter Value: " value
+		return $[ $value * 2 ]
+}
+funct1
+double
+echo "The exit status is $?"
+

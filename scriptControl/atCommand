@@ -1,0 +1,6 @@
+#!/bin/bash
+# we use syntax at -f filename time
+# time can be NOW,tomorrow or any other time
+echo "This scrip is run at $(date +%B%d,%T)" > atCommand.out
+echo >> atCommand.out
+echo "This is script end" >> atCommand.out

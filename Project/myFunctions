@@ -1,0 +1,34 @@
+#!/bin/bash
+#Function defined by user Hemant Mangla
+function welcomeText {
+clear
+#echo -e "\n\n\n\n\t\t\t        Welcome, Hemant Sir\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+echo -e "\n\n\n\n"
+toilet -f smblock -F border::metal ****Welcome, Hemant Sir****
+echo -ne "\n\n\n\n\t\t\t      <Hit any key to Enter>"
+read -n1 
+clear
+}
+welcomeText
+#runCpp is the function to run cpp file
+function runCpp {
+read -p "Enter filename you want to run: " filename
+if make $filename 
+then
+	echo -e "\n\t\t\t<File compiled succesfully>"
+	echo -ne  "\n\t\t\t<Hit Enter to run the file>"
+	read -n1 
+	clear
+	./$filename
+else
+	echo -e "\n\t\t\t<File show error>\n"
+fi
+}
+function search {
+	#echo "Enter the song you want to play"
+	python $HOME/MyDrive/Programming/shellScripts/Project/youtube.py
+	echo 
+	echo "Searching....."
+	echo 
+	sleep 5
+}

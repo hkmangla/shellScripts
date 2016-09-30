@@ -1,0 +1,20 @@
+#!/bin/bash
+#variable defined in script is global and can be accessed by function
+#but it is a bad exprience e.g.
+
+function func {
+	temp=$[ $value + 4 ]
+	result=$[ $temp * 2 ]
+}
+temp=4
+value=6
+func
+echo "The result is $result"
+if [ $temp -gt $value ]
+then
+	echo "temp is larger"
+else
+	echo "temp is smaller"
+fi
+#In this case temp is updated in function which is unecesesary because of globally definition of it
+

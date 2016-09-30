@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#Passing an array inside a function is a little bit tricky
+#Let's take this example
+
+function func1 {
+	echo "The parameters are: $@"
+	newarray=$1
+	echo "The recieved array is ${newarray[*]}"
+}
+
+myarray=(1 2 3 4 5)
+echo "The original array is ${myarray[*]}"
+func1 $myarray
+#This give only first element of the array
+#To solve this problem we have to disassemble the array
+
+function func1 {
+       # echo "The parameters are: $@"
+	local newarray
+        newarray=($(echo "$@"))
+        echo "The recieved array is ${newarray[*]}"
+}
+
+myarray=(1 2 3 4 5)
+echo "The original array is ${myarray[*]}"
+func1 ${myarray[*]}
+

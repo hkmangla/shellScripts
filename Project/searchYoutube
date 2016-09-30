@@ -1,0 +1,9 @@
+#!/bin/bash
+
+read -p "Enter name you want to search on Youtube: " name
+echo
+echo "Searching.... $name"
+echo
+python -mwebbrowser -n https://www.youtube.com/results?search_query="$name" &> /dev/null
+
+#class="yt-lockup yt-lockup-tile yt-lockup-video clearfix" data-context-item-id=

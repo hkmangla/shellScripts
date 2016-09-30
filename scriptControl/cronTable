@@ -1,0 +1,2 @@
+#!/bin/bash
+# min hour dayofmonth month dayofweek command is format of cron table

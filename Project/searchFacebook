@@ -1,0 +1,8 @@
+#!/bin/bash
+
+read -p "Enter name you want to search on facebook: " name
+echo
+echo "Searching.... $name"
+echo
+python -mwebbrowser -t https://www.facebook.com/search/top/?q="$name" &> /dev/null
+

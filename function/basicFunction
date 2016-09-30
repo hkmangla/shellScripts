@@ -1,0 +1,11 @@
+#!/bin/bash
+# format of defining a function in script
+# function name {
+# 		 commands
+#}
+
+function funct1 {
+	echo "This is example of function"
+}
+
+funct1

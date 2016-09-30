@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Passing parameters to function is just like passing to script e.g.
+
+function addem {
+	if [ $# -eq 0 ]
+	then
+		echo -1
+	elif [ $# -eq 1 ]
+	then
+		echo $[ $1 + $1 ]
+	else
+		echo $[ $1 + $2 ]
+	fi
+}
+
+echo -n "Adding 10 and 15: "
+value=$(addem 10 15)
+echo $value
+echo -n "Let's try add one number 10: "
+value=$(addem 10)
+echo $value
+echo -n "Now try adding no numbers: "
+value=$(addem)
+echo $value

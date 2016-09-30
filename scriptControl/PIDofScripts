@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "PID of this script is $$"
+count=1
+while [ $count -le 10 ]
+do
+	sleep 3
+	echo "Loop $count"
+	count=$[ $count + 1 ]
+done

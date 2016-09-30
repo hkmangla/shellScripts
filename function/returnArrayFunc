@@ -1,0 +1,18 @@
+#!/bin/bash
+# This funtion return the sum of the array
+function updateArray {
+	local myarray=($(echo "$@"))
+	local i
+	#local newarray=($(echo "$@"))
+	local elements=$[ $# -1 ]
+	for (( i = 0; i <= $elements; i++))
+	do
+		newarray[$i]=$[ ${myarray[$i]} * 2 ]
+	done
+	echo ${newarray[*]}
+}
+myarray=(1 2 3 4 5)
+echo "The original array is ${myarray[*]}"
+arg1=${myarray[*]}
+result=($(updateArray $arg1))
+echo "The result is ${result[*]}"
